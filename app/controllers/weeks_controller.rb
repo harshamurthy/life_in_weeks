@@ -6,6 +6,13 @@ class WeeksController < ApplicationController
     weeks_lived = ((Date.today - Date.parse(@birthday)).to_i)/7
     weeks_in_ninety_years = 4692
     weeks_left = weeks_in_ninety_years - weeks_lived
-    render json: weeks_left
+    render json: {
+      response: {
+        outputSpeech: {
+            type: "PlainText",
+            text: "You have #{weeks_left} weeks left to become the goat."
+        }
+      }
+    }
   end
 end
