@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'weeks#show'
+  post '/getweeks' => 'weeks#show'
 end
