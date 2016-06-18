@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  post '/getweeks' => 'weeks#show'
+  post '/weeksleft' => 'weeks#create'
 end
